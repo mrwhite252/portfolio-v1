@@ -1,9 +1,0 @@
-{
-    "version": 3,
-    "mappings": "",
-    "sources": [
-        "../../src/components/intro/intro.scss"
-    ],
-    "names": [],
-    "file": "intro.css"
-}

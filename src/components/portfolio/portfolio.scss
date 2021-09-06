@@ -1,3 +1,91 @@
+@import "../../global.scss";
+
 .portfolio {
-  background-color: lightskyblue;
+  background-color: lightgray;
+  padding-top: 2rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  h1 {
+    font-family: "Concert One", cursive;
+    font-size: 3rem;
+    overflow: hidden;
+    margin: 1rem auto;
+  }
+
+  ul {
+    margin: 1rem;
+    padding: 0;
+    list-style: none;
+    display: flex;
+
+    // li {
+    //   font-family: "Concert One", cursive;
+    //   font-size: 1.5rem;
+    //   margin-right: 5rem;
+    //   padding: 0.7rem;
+    //   border-radius: 10px;
+    //   cursor: pointer;
+    //   overflow: hidden;
+
+    //   &.active {
+    //     background-color: $mainColor;
+    //     color: white;
+    //     box-shadow: $boxShadow;
+    //   }
+    // }
+  }
+
+  .container {
+    width: 60%;
+    margin-top: 2rem;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    flex-wrap: wrap;
+    // display: grid;
+    // grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    // grid-column-gap: 3rem;
+    // grid-row-gap: 5rem;
+
+    .item {
+      width: 22rem;
+      height: 15rem;
+      overflow: hidden;
+      border-radius: 20px;
+      border: 1px solid lightgray;
+      margin: 0.5rem;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: white;
+      position: relative;
+      box-shadow: $boxShadow;
+      transition: all 0.5s ease;
+      cursor: pointer;
+
+      h3 {
+        position: absolute;
+        font-size: 1.2rem;
+      }
+
+      img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        z-index: 1;
+        transition: all 0.5s ease;
+      }
+
+      &:hover {
+        background-color: $mainColor;
+        img {
+          opacity: 0.2;
+          transform: scale(1.02);
+          z-index: 0;
+        }
+      }
+    }
+  }
 }
