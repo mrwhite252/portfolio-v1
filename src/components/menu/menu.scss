@@ -1,7 +1,7 @@
 @import "../../global.scss";
 
 .menu {
-  width: 30vw;
+  width: 25vw;
   height: 100vh;
   background-color: $mainColor;
   position: fixed;
@@ -23,8 +23,18 @@
     margin: 0;
     padding: 0;
     list-style: none;
-    font-size: 3rem;
+    font-size: 2rem;
     color: white;
+    @include laptop {
+      font-size: 1.8rem;
+    }
+    @include tablet {
+      font-size: 1rem;
+    }
+    @include mobile {
+      font-size: 0.8rem;
+    }
+
     li {
       margin-bottom: 2rem;
       a {

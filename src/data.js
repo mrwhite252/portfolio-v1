@@ -1,106 +1,81 @@
-export const graphicPortfolio = [
+export const uxData = [
   {
-    id: 1,
-    title: "Promotion Poster",
-    img: "assets/graphic/poster.png",
+    id: "1",
+    icon: "./assets/figma.svg",
+    icon2: "./assets/html.svg",
+    icon3: "./assets/css.svg",
+    icon4: "./assets/js.png",
+    title: "Redesign of NetinSites Website",
+    desc: "Netinsites are a web design company based in Auckland. This UX project is aiming to make their website up to date and to create a more user friendly overall layout.",
+    img: "./assets/ux/netinsites.png",
+    originalWebsite: "https://www.netinsites.com/",
+    newWebsite: "https://mrwhite252.github.io/netinsites/",
+    original: "Original Website",
+    new: "Redesigned Website",
   },
   {
-    id: 2,
-    title: "Leaflet Brouchure",
-    img: "assets/graphic/leaflet-mockup.png",
+    id: "2",
+    icon: "./assets/figma.svg",
+    icon2: "./assets/html.svg",
+    icon3: "./assets/css.svg",
+    icon4: "./assets/js.png",
+    title: "Redesign of ECO NZ Website",
+    desc: "An ECO member organization asked to undertake a review of their existing site’s user experience and formulate a plan for a site redesign which includes a web-based prototype.",
+    img: "./assets/ux/econz.png",
+    originalWebsite: "http://www.eco.org.nz/",
+    newWebsite: "https://mrwhite252.github.io/econz-redesign/",
+    original: "Original Website",
+    new: "Redesigned Website",
   },
   {
-    id: 3,
-    title: "Maori Alphabet Poster",
-    img: "assets/graphic/final-work.png",
-  },
-  {
-    id: 4,
-    title: "Logo Design",
-    img: "assets/graphic/logo-style-guide.png",
-  },
-];
-
-export const packagePortfolio = [
-  {
-    id: 1,
-    title: "Box Package Design",
-    img: "assets/package/book-box-package.jpg",
-  },
-  {
-    id: 2,
-    title: "Food Package Design",
-    img: "assets/package/packaging-mock-up-1.jpg",
-  },
-  {
-    id: 3,
-    title: "Magazine Cover Design",
-    img: "assets/package/Mockup-back-cover.png",
-  },
-  {
-    id: 4,
-    title: "Dynamic Package Design",
-    img: "assets/package/envelop-package.png",
-  },
-];
-
-export const webPortfolio = [
-  {
-    id: 1,
-    title: "Responsive Website",
-    img: "assets/web/website-ui.png",
-  },
-  {
-    id: 2,
-    title: "Mobile App UI Design",
-    img: "assets/web/ui-design-mock-up.png",
-  },
-  {
-    id: 3,
-    title: "Website Design",
-    img: "assets/web/uc-ui-design.png",
-  },
-  {
-    id: 4,
-    title: "Responsive Website",
-    img: "assets/web/rental-ui-design.png",
-  },
-  {
-    id: 5,
-    title: "Website Design",
-    img: "assets/web/eco-ui-design.png",
-  },
-  {
-    id: 6,
-    title: "Website UI Design",
-    img: "assets/web/bottles-ui-design.png",
+    id: "3",
+    icon: "./assets/figma.svg",
+    icon2: "./assets/html.svg",
+    icon3: "./assets/css.svg",
+    icon4: "./assets/js.png",
+    title: "Tourism NZ Campaign Website",
+    desc: "In order to fit in the Tourism NZ campaign, I am creating a webpage allows users to input and validate information,display transport options based on the information entered, and calculate and display the transport costs to the user.",
+    img: "./assets/ux/rentalcar.png",
+    originalWebsite:
+      "https://drive.google.com/file/d/1JhR-CJWq_jmMnnk7i8ku_by1A3Omzmnz/view?usp=sharing",
+    newWebsite: "https://mrwhite252.github.io/single-page-app-dist/",
+    original: "UX Design Process",
+    new: "Designed Website",
   },
 ];
 
-export const contentPortfolio = [
+export const frontData = [
   {
-    id: 1,
-    title: "Magazine Content Creation",
-    img: "assets/content/Mockup_1.png",
+    id: "1",
+    icon: "./assets/react.svg",
+    icon1: "./assets/git.svg",
+    icon2: "./assets/sass.svg",
+    icon3: "./assets/js2.svg",
+    title: "Music Player Web Application",
+    desc: "This project is aiming to learning to use some basic concepts with React.js like components, props, state and event handling.",
+    img: "./assets/front-end/music-app.png",
+    link: "https://mrwhite252.github.io/music-app-demo/",
   },
   {
-    id: 2,
-    title: "Magazine Content Creation",
-    img: "assets/content/Mockup_2.png",
+    id: "2",
+    icon: "./assets/loop.svg",
+    icon1: "./assets/git.svg",
+    icon2: "./assets/sass.svg",
+    icon3: "./assets/js2.svg",
+    title: "Tempo Maker",
+    desc: `This project is aiming of practice JavaScript skills, especially understand the concept of loop and "this" in JavaScript.`,
+    img: "./assets/front-end/tempo-maker.png",
+    link: "https://mrwhite252.github.io/beat-maker/",
   },
   {
-    id: 3,
-    title: "Magazine Content Creation",
-    img: "assets/content/Mockup_3.png",
-  },
-  {
-    id: 4,
-    title: "Magazine Content Creation",
-    img: "assets/content/Mockup_4.png",
-  },
-  {
-    id: 5,
-    title: "Magazine Content Creation",
-    img: "assets/content/Mockup_5.png",
+    id: "3",
+    icon: "./assets/api.svg",
+    icon1: "./assets/git.svg",
+    icon2: "./assets/sass.svg",
+    icon3: "./assets/js2.svg",
+    title: "Photo Gallery API Project",
+    desc: `This project is aiming of learning fetch data from an API and render the contents accordingly.`,
+    img: "./assets/front-end/api.png",
+    link: "https://mrwhite252.github.io/api-experinment/",
   },
 ];

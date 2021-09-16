@@ -10,9 +10,10 @@
   z-index: 3;
   transition: all 1s ease;
   box-shadow: $boxShadow;
+  font-family: "Gugi", cursive;
 
   .wrapper {
-    padding: 0 1rem;
+    padding: 0.5rem 1.5rem;
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -22,10 +23,20 @@
       justify-content: center;
       align-items: center;
       .logo {
-        font-family: "Saira Stencil One", cursive;
+        display: flex;
+        justify-content: space-between;
         text-decoration: none;
         color: inherit;
-        font-size: 3em;
+        font-size: 1.5rem;
+
+        img {
+          width: 3rem;
+          margin-right: 2rem;
+        }
+
+        #transparent-logo {
+          display: none;
+        }
       }
     }
 
@@ -33,15 +44,26 @@
       display: flex;
       align-items: center;
       margin-left: 2em;
+
+      @include tablet {
+        margin-left: 1em;
+      }
+
+      @include mobile {
+        display: none;
+      }
+
       .icon {
         font-size: 1.5em;
         font-weight: bold;
         margin-left: 1.5em;
       }
       span {
-        font-size: 1.5em;
+        font-size: 1.5rem;
         margin-left: 1rem;
-        font-family: "Concert One", cursive;
+        @include tablet {
+          font-size: 1rem;
+        }
       }
     }
 
@@ -66,6 +88,19 @@
   &.active {
     background-color: $mainColor;
     color: white;
+
+    .left {
+      .logo {
+        #original-logo {
+          display: none;
+          transition: all 1s ease-out;
+        }
+
+        #transparent-logo {
+          display: block;
+        }
+      }
+    }
 
     .menu-icon {
       span {

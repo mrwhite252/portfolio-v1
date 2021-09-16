@@ -7,8 +7,15 @@ export default function Topbar({ menuOpen, setMenuOpen }) {
       <div className="wrapper">
         <div className="left">
           <a href="#intro" className="logo">
-            DAVID BAI
+            <img id="original-logo" src="assets/logo-img.svg" alt="logo-img" />
+            <img
+              id="transparent-logo"
+              src="assets/logo-img-white.svg"
+              alt="logo-img-white"
+            />
+            <h1>DAVID BAI</h1>
           </a>
+
           <div className="itemContainer">
             <PhoneAndroid className="icon" />
             <span>021 187 0328</span>

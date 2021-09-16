@@ -1,76 +1,47 @@
-import { useEffect, useState } from "react";
+import { useState } from "react";
 
-import PortfolioList from "../portfolioList/PortfolioList";
+import GraphicDesign from "../graphicDesign/GraphicDesign";
+
+import PackageDesign from "../PackageDesign/PackageDesign";
+
+import UI from "../UI/UI";
+
 import "./portfolio.scss";
 
-import {
-  graphicPortfolio,
-  packagePortfolio,
-  webPortfolio,
-  contentPortfolio,
-} from "../../data";
-
 export default function Portfolio() {
-  const [selected, setSelected] = useState("graphic");
-  const [data, setData] = useState([]);
-  const list = [
-    {
-      id: "graphic",
-      title: "Graphic Design",
-    },
-    {
-      id: "package",
-      title: "Package Design",
-    },
-    {
-      id: "web",
-      title: "Web Development",
-    },
-    {
-      id: "content",
-      title: "Content",
-    },
-  ];
+  const [selected, setSelected] = useState(1);
 
-  useEffect(() => {
-    switch (selected) {
-      case "graphic":
-        setData(graphicPortfolio);
-        break;
-      case "package":
-        setData(packagePortfolio);
-        break;
-      case "web":
-        setData(webPortfolio);
-        break;
-      case "content":
-        setData(contentPortfolio);
-        break;
-      default:
-        setData(graphicPortfolio);
-    }
-  }, [selected]);
+  const toggleTab = (index) => {
+    setSelected(index);
+  };
 
   return (
     <div className="portfolio" id="portfolio">
       <h1>Portfolio</h1>
       <ul>
-        {list.map((item) => (
-          <PortfolioList
-            title={item.title}
-            active={selected === item.id}
-            setSelected={setSelected}
-            id={item.id}
-          />
-        ))}
+        <li
+          onClick={() => toggleTab(1)}
+          className={selected === 1 ? "active" : ""}
+        >
+          Graphic Design
+        </li>
+        <li
+          onClick={() => toggleTab(2)}
+          className={selected === 2 ? "active" : ""}
+        >
+          Package Design
+        </li>
+        <li
+          onClick={() => toggleTab(3)}
+          className={selected === 3 ? "active" : ""}
+        >
+          UI Design
+        </li>
       </ul>
       <div className="container">
-        {data.map((d) => (
-          <div className="item">
-            <img src={d.img} alt={d.title} />
-            <h3>{d.title}</h3>
-          </div>
-        ))}
+        {selected === 1 && <GraphicDesign />}
+        {selected === 2 && <PackageDesign />}
+        {selected === 3 && <UI />}
       </div>
     </div>
   );

@@ -1,19 +1,13 @@
 import "./intro.scss";
 import ExpandMoreRoundedIcon from "@material-ui/icons/ExpandMoreRounded";
-import { init } from "ityped";
-import { useEffect, useRef } from "react";
+import { useTypewriter, Cursor } from "react-simple-typewriter";
 
 export default function Intro() {
-  const textRef = useRef();
-
-  useEffect(() => {
-    init(textRef.current, {
-      showCursor: true,
-      backDelay: 1500,
-      backSpeed: 60,
-      strings: ["Front End Developer", "UI/UX Designer", "Content Creator"],
-    });
+  const { text } = useTypewriter({
+    words: ["UI/UX Designer", "Front End Developer"],
+    loop: 0,
   });
+
   return (
     <div className="intro" id="intro">
       <div className="left">
@@ -26,7 +20,8 @@ export default function Intro() {
           <h2>Hi There, I am </h2>
           <h1>David Bai</h1>
           <h3>
-            Dynamic <span ref={textRef}></span>
+            A Dynamic <span>{text}</span>
+            <Cursor />
           </h3>
           <a href="#portfolio">
             <ExpandMoreRoundedIcon className="arrow-icon" />

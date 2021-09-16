@@ -1,10 +1,22 @@
+@import "../../global.scss";
+
 .intro {
   background-color: white;
   display: flex;
 
+  @include mobile {
+    flex-direction: column;
+    align-items: center;
+    padding: 2rem 0;
+  }
+
   .left {
     flex: 0.5;
     overflow: hidden;
+
+    @include tablet {
+      flex: 0.4;
+    }
 
     .imgContainer {
       width: 100%;
@@ -13,9 +25,16 @@
       align-items: center;
       justify-content: center;
 
+      @include mobile {
+        overflow: hidden;
+      }
+
       img {
-        display: block;
         width: 60%;
+
+        @include mobile {
+          width: 50%;
+        }
       }
     }
   }
@@ -23,6 +42,14 @@
   .right {
     flex: 0.5;
     position: relative;
+    @include tablet {
+      flex: 0.6;
+    }
+
+    @include mobile {
+      flex: 0.6;
+      width: 100%;
+    }
 
     .wrapper {
       width: 100%;
@@ -31,24 +58,54 @@
       display: flex;
       flex-direction: column;
       justify-content: center;
+      @include mobile {
+        width: 45%;
+        margin: 0 auto;
+        padding: 0;
+        justify-content: flex-start;
+      }
     }
     h1 {
-      font-family: "Concert One", cursive;
+      font-family: "Cairo", sans-serif;
       font-size: 7rem;
       line-height: 200%;
+
+      @include laptop {
+        font-size: 4rem;
+      }
+
+      @include tablet {
+        line-height: 3rem;
+      }
+
+      @include mobile {
+        font-size: 2.5rem;
+        line-height: 250%;
+      }
     }
     h2 {
-      font-family: "Concert One", cursive;
+      font-family: "Cairo", sans-serif;
       font-size: 3rem;
       line-height: 200%;
+
+      @include laptop {
+        font-size: 2rem;
+      }
+
+      @include mobile {
+        font-size: 1.5rem;
+      }
     }
     h3,
     span {
-      font-family: "Concert One", cursive;
+      font-family: "Cairo", sans-serif;
       font-size: 2rem;
       line-height: 200%;
       span {
         color: #fc801b;
+      }
+      @include mobile {
+        font-size: 1.5rem;
       }
 
       .ityped-cursor {
@@ -82,6 +139,11 @@
       100% {
         opacity: 0;
       }
+    }
+
+    @include mobile {
+      left: 50%;
+      transform: translateX(-50%);
     }
   }
 }

@@ -3,7 +3,7 @@ import Menu from "./components/menu/Menu";
 import Intro from "./components/intro/Intro";
 import Portfolio from "./components/portfolio/Portfolio";
 import Works from "./components/works/Works";
-import Testimonials from "./components/testimonials/Testimonials";
+import AboutMe from "./components/about/AboutMe";
 import Contact from "./components/contact/Contact";
 import "./app.scss";
 import { useState } from "react";
@@ -18,7 +18,7 @@ function App() {
         <Intro />
         <Portfolio />
         <Works />
-        <Testimonials />
+        <AboutMe />
         <Contact />
       </div>
     </div>

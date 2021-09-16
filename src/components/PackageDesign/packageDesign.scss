@@ -1,0 +1,58 @@
+@import "../../global.scss";
+
+.package-design-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(8rem, 1fr));
+  grid-template-rows: repeat(2, auto);
+  grid-auto-flow: row dense;
+  grid-auto-rows: 200px;
+  gap: 1rem 1rem;
+  grid-auto-flow: row;
+  grid-template-areas:
+    "first-image first-image first-image first-image fourth-image fourth-image fourth-image fourth-image ."
+    "second-image second-image third-image third-image fourth-image fourth-image fourth-image fourth-image .";
+  width: 100%;
+  height: 95%;
+  padding: 0rem 0rem 0rem 2rem;
+  align-items: center;
+
+  .image-container {
+    overflow: hidden;
+    height: 100%;
+    width: 100%;
+  }
+
+  .image {
+    width: 100%;
+    height: 100%;
+    object-fit: fill;
+    border-radius: 10px;
+    box-shadow: 0px 3px 10px rgba(0, 0, 0, 0.4);
+    cursor: pointer;
+    transition: all 0.5s ease-out;
+
+    @include mobile {
+      object-fit: contain;
+    }
+  }
+
+  .image:hover {
+    transform: scale(1.05);
+  }
+}
+
+.first-image {
+  grid-area: first-image;
+}
+
+.second-image {
+  grid-area: second-image;
+}
+
+.third-image {
+  grid-area: third-image;
+}
+
+.fourth-image {
+  grid-area: fourth-image;
+}

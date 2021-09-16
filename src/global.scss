@@ -1,3 +1,40 @@
-$mainColor: #15023a;
+$mainColor: #fc801b;
+
+$blueColor: #0096b0;
+
+$greyColor: #a6a5a6;
 
 $boxShadow: 0px 3px 10px rgba(0, 0, 0, 0.4);
+
+$mobileWidth: 768px;
+
+@mixin mobile {
+  @media (max-width:#{$mobileWidth}) {
+    @content;
+  }
+}
+
+$laptopWidth: 1440px;
+
+@mixin laptop {
+  @media (max-width:#{$laptopWidth}) {
+    @content;
+  }
+}
+
+$tabletWidth: 1024px;
+
+@mixin tablet {
+  @media (max-width:#{$tabletWidth}) {
+    @content;
+  }
+}
+
+* {
+  font-family: "Cairo", sans-serif;
+  font-family: "Gugi", cursive;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  overflow-x: hidden;
+}
